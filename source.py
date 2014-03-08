@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import subprocess
-
 import urllib
 
 def sendmessage(message):
@@ -14,11 +13,9 @@ def load_html():
 	return urllib.urlopen(url) 
 
 infile = load_html()
-
 file = open("/home/kostya/bin/lost.txt", "r")
 temp = file.readline()
 file.close()
-
 lines = infile.readlines()
 for i in range(len(lines)):
 	line = lines[i]
@@ -26,10 +23,8 @@ for i in range(len(lines)):
 		serial_name = lines[i][170:-13]	
 		serial_name = serial_name + "  (new episod on lostfilm.tv)"			
 		break
-
 if temp != serial_name:
 	sendmessage(unicode(serial_name, 'cp1251'))
-
 file = open("/home/kostya/bin/lost.txt", "w")
 file.write(serial_name)
 file.close()
