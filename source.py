@@ -12,6 +12,8 @@ lines = infile.readlines()
 for i in range(len(lines)):
 	line = lines[i]
 	if "text-decoration:none" in line:
-		name = lines[i][170:-13]		
-		print unicode(name, 'cp1251')
+		serial_name = lines[i][170:-13]		
+		print unicode(serial_name, 'cp1251')
+		episod_name = lines[i+3][166:-13]
+		print unicode(episod_name, 'cp1251')
 	
