@@ -15,7 +15,7 @@ def load_html():
 
 infile = load_html()
 
-file = open("/home/kostya/Development/Python/lostfilmScript/lostfilm.tv-app/lost.txt", "r")
+file = open("/home/kostya/bin/lost.txt", "r")
 temp = file.readline()
 file.close()
 
@@ -25,14 +25,11 @@ for i in range(len(lines)):
 	if "text-decoration:none" in line:
 		serial_name = lines[i][170:-13]	
 		serial_name = serial_name + "  (new episod on lostfilm.tv)"			
-		episod_name = lines[i+3][166:-13]
 		break
 
-if temp == serial_name:
+if temp != serial_name:
 	sendmessage(unicode(serial_name, 'cp1251'))
 
-file = open("/home/kostya/Development/Python/lostfilmScript/lostfilm.tv-app/lost.txt", "w")
+file = open("/home/kostya/bin/lost.txt", "w")
 file.write(serial_name)
 file.close()
-		
-
