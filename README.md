@@ -1,6 +1,6 @@
 lostfilm.tv-app
 ===============
-A simple script that allows you to not miss the new series of the favorite show.
+A simple script that allows you not to miss the new series of the favorite show.
 
 
 ##Usage
