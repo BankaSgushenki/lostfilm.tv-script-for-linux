@@ -1,4 +1,4 @@
-lostfilm.tv-app
+lostfilm.tv-script-for-linux
 ===============
 A simple script that allows you not to miss the new series of the favorite show.
 
